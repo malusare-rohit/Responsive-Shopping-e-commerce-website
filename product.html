@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f4f4f4;
+        }
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            width: 90vw;
+            height: 90vh;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .grid-item {
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        .item1 { grid-column: span 2; grid-row: span 1; background-image: url('./one.jpeg'); }
+        .item2 { grid-column: span 1; grid-row: span 2; background-image: url('./one.jpeg'); }
+        .item3 { grid-column: span 1; grid-row: span 1; background-image: url('./one.jpeg'); }
+        .item4 { grid-column: span 2; grid-row: span 2; background-image: url('./one.jpeg'); }
+        .item5 { grid-column: span 1; grid-row: span 1; background-image: url('./one.jpeg'); }
+        .item6 { grid-column: span 2; grid-row: span 1; background-image: url('./one.jpeg'); }
+        .item7 { grid-column: span 1; grid-row: span 1; background-image: url('./one.jpeg'); }
+.yes{
+transition: 0.5s;
+}
+.yes:hover{
+background-position:left;
+opacity: 0.6;
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1 yes"></div>
+        <div class="grid-item item2 yes"></div>
+        <div class="grid-item item3 yes"></div>
+        <div class="grid-item item4 yes"></div>
+        <div class="grid-item item5 yes"></div>
+        <div class="grid-item item6 yes"></div>
+        <div class="grid-item item7 yes"></div>
+    </div>
+</body>
+</html>
